@@ -11,44 +11,44 @@ inline double calc_volume(double radius)
 
 int main()
 {
-	// p.160, 2¹ø ¹®Á¦
+	// p.160, 2ë²ˆ ë¬¸ì œ
 	double r;
-	cout << "¹ÝÁö¸§À» ÀÔ·ÂÇÏ½Ã¿À: ";
+	cout << "ë°˜ì§€ë¦„ì„ ìž…ë ¥í•˜ì‹œì˜¤: ";
 	cin >> r;
-	cout << "±¸ÀÇ ºÎÇÇ´Â " << calc_volume(r) << endl;
+	cout << "êµ¬ì˜ ë¶€í”¼ëŠ” " << calc_volume(r) << endl;
 	return 0;
 
-	// p.162, 9¹ø ¹®Á¦
+	// p.162, 9ë²ˆ ë¬¸ì œ
 	srand(time(NULL));
 	int dice1 = rand() % 6 + 1;
 	int dice2 = rand() % 6 + 1;
 	int sum = dice1 + dice2;
-	cout << "»ç¿ëÀÚÀÇ ÁÖ»çÀ§:  " << dice1 << "+" << dice2 << "=" << sum << endl;
+	cout << "ì‚¬ìš©ìžì˜ ì£¼ì‚¬ìœ„:  " << dice1 << "+" << dice2 << "=" << sum << endl;
 	if (sum == 7 || sum == 11)
-		cout << "»ç¿ëÀÚ°¡ ÀÌ°å½À´Ï´Ù." << endl;
+		cout << "ì‚¬ìš©ìžê°€ ì´ê²¼ìŠµë‹ˆë‹¤." << endl;
 	else if (sum == 2 || sum == 3 || sum == 12)
-		cout << "»ç¿ëÀÚ°¡ Á³½À´Ï´Ù." << endl;
+		cout << "ì‚¬ìš©ìžê°€ ì¡ŒìŠµë‹ˆë‹¤." << endl;
 	return 0;
 
 
-	// p.164, 13¹ø ¹®Á¦
+	// p.164, 13ë²ˆ ë¬¸ì œ
 	char password[100];
 	bool upper = false, lower = false, number = false;
-	cout << "¾ÏÈ£¸¦ ÀÔ·ÂÇÏ½Ã¿À: ";
+	cout << "ì•”í˜¸ë¥¼ ìž…ë ¥í•˜ì‹œì˜¤: ";
 	cin >> password;
 
 	for (int i = 0; i < size(password); i++)
 	{
-		if (password[i] >= 65 && password[i] <= 90)				// ´ë¹®ÀÚ ¾Æ½ºÅ°ÄÚµå
+		if (password[i] >= 65 && password[i] <= 90)			// ëŒ€ë¬¸ìž
 			upper = true;
-		else if (password[i] >= 97 && password[i] <= 122)		// ¼Ò¹®ÀÚ ¾Æ½ºÅ°ÄÚµå
+		else if (password[i] >= 97 && password[i] <= 122)		// ì†Œë¬¸ìž
 			lower = true;
-		else if (password[i] >= 48 && password[i] <= 57)		// ¼ýÀÚ ¾Æ½ºÅ°ÄÚµå
+		else if (password[i] >= 48 && password[i] <= 57)		// ìˆ«ìž
 			number = true;
 	}
 	if (upper && lower && number)
-		cout << "¾ÈÀüÇÕ´Ï´Ù." << endl;
+		cout << "ì•ˆì „í•©ë‹ˆë‹¤." << endl;
 	else
-		cout << "¾ÈÀüÇÏÁö ¾Ê½À´Ï´Ù." << endl;
+		cout << "ì•ˆì „í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤." << endl;
 	return 0;
 }
